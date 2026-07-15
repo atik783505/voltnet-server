@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Require system (CommonJS) active korar jonno ekhane change kora hoyeche:
+    "module": "CommonJS",                          
+    "moduleResolution": "node",                  
+    "target": "ES2022",
+    "types": ["node"],
+    
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "strict": true,
+    "jsx": "react-jsx",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
