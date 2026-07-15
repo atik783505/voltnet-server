@@ -5,9 +5,9 @@
 
     // Require system (CommonJS) active korar jonno ekhane change kora hoyeche:
     "module": "CommonJS",                          
-    "moduleResolution": "node",                  
     "target": "ES2022",
     "types": ["node"],
+    "esModuleInterop": true,
     
     "sourceMap": true,
     "declaration": true,
