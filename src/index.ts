@@ -15,8 +15,6 @@ const uri = process.env.MONGODB_URI;
 if (!uri) {
     throw new Error("MONGODB_URI environment variable is not set");
 }
-
-// গ্লোবাল ক্লায়েন্ট ডিক্লেয়ারেশন (কানেকশন রিউজ করার জন্য)
 const client = new MongoClient(uri);
 const database = client.db('voltnet');
 const stationCollection = database.collection('station');
