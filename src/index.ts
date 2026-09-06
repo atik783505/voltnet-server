@@ -286,7 +286,7 @@ async function run() {
                             _id: 1,
                             bookingDate: 1,
                             connectorType: 1,
-                            duration: 1, // 👈 ফ্রন্টএন্ডে শো করার জন্য রেসপন্সে duration পাঠানো হলো
+                            duration: 1,
                             energyDelivered: 1,
                             "stationDetails.name": 1,
                             "stationDetails.location": 1
