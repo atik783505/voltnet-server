@@ -19,7 +19,6 @@ const client = new MongoClient(uri);
 
 async function run() {
     try {
-        // Connect to MongoDB
         // await client.connect();
 
         const database = client.db('voltnet');
