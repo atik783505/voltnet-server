@@ -37,9 +37,9 @@ async function run() {
                 }
                 const result = await stationCollection.insertOne({
                     ...stationData,
-                    images: stationData.images || [], // Multiple images
-                    pricing: Number(stationData.pricing), // Price per kWh or hour
-                    powerOutput: Number(stationData.powerOutput), // kW
+                    images: stationData.images || [], 
+                    pricing: Number(stationData.pricing), 
+                    powerOutput: Number(stationData.powerOutput), 
                     createdAt: new Date()
                 });
                 res.status(201).json({
