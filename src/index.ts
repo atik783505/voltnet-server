@@ -227,14 +227,12 @@ async function run() {
                 }
 
                 const transactionId = `TXN-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
-
-                // ১. বুকিং অবজেক্টে duration সেভ করা হচ্ছে
                 const bookingDoc = {
                     userEmail,
                     stationId: new ObjectId(stationId),
                     bookingDate: new Date(bookingDate),
                     connectorType,
-                    duration: Number(duration), // 👈 duration ডাটাবেজে যুক্ত হলো
+                    duration: Number(duration),
                     energyDelivered: 0,
                     createdAt: new Date()
                 };
