@@ -262,7 +262,6 @@ async function run() {
             }
         });
 
-        // GET Charging History API (Updated to project duration)
         app.get('/api/history/charging/:email', async (req: Request, res: Response) => {
             try {
                 const email = req.params.email;
