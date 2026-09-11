@@ -151,8 +151,6 @@ async function run() {
                 res.status(500).send({ message: "Failed to update station", error });
             }
         });
-
-        // DELETE Station API
         app.delete('/api/stations/:id', async (req: Request, res: Response) => {
             try {
                 const stationId = req.params.id;
