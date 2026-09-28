@@ -120,7 +120,6 @@ async function run() {
                 res.status(500).send({ message: "Failed to fetch station", error });
             }
         });
-        // UPDATE Station API
         app.put('/api/stations/:id', async (req: Request, res: Response) => {
             try {
                 const stationId = req.params.id;
