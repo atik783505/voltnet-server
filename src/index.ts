@@ -37,9 +37,9 @@ async function run() {
                 }
                 const result = await stationCollection.insertOne({
                     ...stationData,
-                    images: stationData.images || [], 
-                    pricing: Number(stationData.pricing), 
-                    powerOutput: Number(stationData.powerOutput), 
+                    images: stationData.images || [],
+                    pricing: Number(stationData.pricing),
+                    powerOutput: Number(stationData.powerOutput),
                     createdAt: new Date()
                 });
                 res.status(201).json({
@@ -52,7 +52,7 @@ async function run() {
                 res.status(500).json({ success: false, message: error.message });
             }
         });
-
+        //station api
         app.get('/api/stations', async (req: Request, res: Response) => {
             try {
                 const { search, location, minPrice, maxPrice, sortBy, page } = req.query;
