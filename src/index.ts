@@ -326,6 +326,15 @@ async function run() {
                 res.status(500).json({ success: false, message: error.message });
             }
         });
+        app.get('/api/companyStations/:userId',async (req: Request, res: Response) => {
+            try {
+                const userId = req.params.userId;
+                const result = await stationCollection.find({ userId }).toArray();
+                res.status(200).json({ success: true, data: result });
+            } catch (error: any) {
+                res.status(500).json({ success: false, message: error.message });
+            }
+        });
         app.get('/', (req: Request, res: Response) => {
             res.send('TypeScript (CommonJS) Backend is Running!');
         });
